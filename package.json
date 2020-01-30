@@ -1,0 +1,20 @@
+{
+  "name": "desafio-academia-node-ficr",
+  "version": "1.0.0",
+  "description": "Neste desafio você deverá desenvolver uma api que retorna um currículo dinâmico. Para isso, você deverá comunicar-se com dois serviços para capturar informações. A api do Facebook e a api do Github.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersonprax/desafio-academia-node-ficr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andersonprax/desafio-academia-node-ficr/issues"
+  },
+  "homepage": "https://github.com/andersonprax/desafio-academia-node-ficr#readme"
+}
