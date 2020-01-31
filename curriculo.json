@@ -1,0 +1,39 @@
+{
+    "formacao": [
+        {
+            "instituicao": "Ibratec - Instituto Brasileiro de Tecnologia",
+            "curso": "Análise e Desenvolvimento de Sistemas",
+            "inicio": "02/03/2015",
+            "termino": "atual"
+        },
+        {
+            "instituicao": "FICR - Faculdade Católica Imaculada Conceição do Recife",
+            "curso": "Análise e Desenvolvimento de Sistemas",
+            "inicio": "10/02/2020",
+            "termino": "atual"
+        }
+    ],
+    "experiencia_profissional": [
+        {
+            "empresa": "Câmara Municipal do Recife",
+            "funcao": "Operador de informática",
+            "atividade": "Suporte de informática para toda a casa legislativa e gabinetes dos vereadores.",
+            "inicio": "01/06/2012",
+            "termino": "02/01/2013"
+        },
+        {
+            "empresa": "Nintendo Gaming do Brasil",
+            "funcao": "Merchandiser e Suporte de informática",
+            "atividade": "Representante e suporte realizando pesquisa de concorrência e no monitoramento de resultados",
+            "inicio": "01/06/2012",
+            "termino": "03/04/2015"
+        },
+        {
+            "empresa": "Ministério da Agricultura, Pecuária e Abastecimento – MAPA",
+            "funcao": "Estagiário no centro de processamento de dados – CPD",
+            "atividade": "Realização de atividades de apoio, análise e manutenção de redes de computadores, hardwares e softwares com atendimento presencial e remoto",
+            "inicio": "02/01/2019",
+            "termino": "31/12/2019"
+        }
+    ]
+} 

@@ -1,4 +1,6 @@
 const axios = require('axios')
+const Curriculo = require('../models/CurriculoModel')
+const fs = require('fs')
 
 class CurriculoController {
     async github(req, res, next) {
@@ -81,6 +83,18 @@ class CurriculoController {
             console.log('error', error)
             return res.send(error)
         }
+    }
+
+    async text(req, res, next) {
+
+        let path = req.params.path
+
+        let dataPath = 'curriculo.json'
+
+        fs.readFile(dataPath, 'utf8', (error, data) => {
+            if (error) throw error
+            res.send(data)
+        })
     }
 }
 
