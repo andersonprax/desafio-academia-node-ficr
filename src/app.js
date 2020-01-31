@@ -1,5 +1,6 @@
 const express = require('express')
 const router = require('./routes')
+const dotenv = require('dotenv')
 
 class App {
     constructor() {
@@ -11,6 +12,7 @@ class App {
 
     middlewares() {
         this.express.use(express.json())
+        dotenv.config()
     }
 
     routes() {
