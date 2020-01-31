@@ -21,6 +21,7 @@ routes.get('/github', async (req, res, next) => {
         console.log('error', error)
         return res.send(error);
     }
+
     try {
         const { data } = await axios.get(`https://api.github.com/users/${process.env.GITHUB_USER}/repos`);
 
@@ -36,11 +37,11 @@ routes.get('/github', async (req, res, next) => {
                 return 1
             if (a.size > b.size)
                 return -1
-            return 0;
+            return 0
         }).slice(0, 3)
     } catch (error) {
         console.log('error', error)
-        return res.send(error);
+        return res.send(error)
     }
 
     const githubProfile = {
@@ -55,10 +56,31 @@ routes.get('/github', async (req, res, next) => {
 })
 
 routes.get('/facebook', async (req, res, next) => {
-    const FACEBOOK_URL = `https://graph.facebook.com/v5.0/me?fields=id%2Cname%2Cgender%2Cbirthday%2Cemail%2Cpicture&access_token=${process.env.FACEBOOK_TOKEN}`
+    const FACEBOOK_URL = `https://graph.facebook.com/v5.0/me?fields=picture%2Cfirst_name%2Clast_name%2Caddress%2Cgender%2Cbirthday%2Cemail%2Clocation&access_token=${process.env.FACEBOOK_TOKEN}`
+    
     try {
         const { data } = await axios.get(FACEBOOK_URL)
-        res.send(data)
+
+        first_name = data.first_name
+        birthday = data.birthday
+        last_name = data.last_name
+        gender = data.gender
+        email = data.email
+        location = data.location
+        picture = data.picture.data.url
+
+        const facebookProfile = {
+            first_name,
+            birthday,
+            last_name,
+            gender,
+            email,
+            location,
+            picture
+        }
+
+        res.send(facebookProfile)
+
     } catch (error) {
         console.log('error', error)
         return res.send(error)
