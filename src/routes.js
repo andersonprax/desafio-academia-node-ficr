@@ -9,7 +9,7 @@ routes.get('/github', async (req, res, next) => {
     
     // extraindo dados do github
     let repos = []
-    let name, bio, company
+    let name, bio, company, html_url
     
     try {
         const { data } = await axios.get('https://api.github.com/users/andersonprax');
@@ -17,7 +17,7 @@ routes.get('/github', async (req, res, next) => {
         company = data.company
         name = data.name
         bio = data.bio
-
+        html_url = data.html_url
     } catch (error) {
         console.log('error', error)
         return res.send(error);
@@ -43,6 +43,16 @@ routes.get('/github', async (req, res, next) => {
         console.log('error', error)
         return res.send(error);
     }
+
+    const githubProfile = {
+        name,
+        html_url,
+        bio,
+        company,
+        repositories: repos
+    }
+
+    res.send(githubProfile)
 })
 
 module.exports = routes 
